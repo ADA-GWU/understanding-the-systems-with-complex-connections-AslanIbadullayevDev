@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/understanding-the-systems-with-complex-connections-AslanIbadullayevDev/FileContentIndex
+/.vs
+/ServerApp/obj
+/ClientApp/obj
+/ServerApp/bin/Debug/net6.0
+/ClientApp/bin/Debug/net6.0
