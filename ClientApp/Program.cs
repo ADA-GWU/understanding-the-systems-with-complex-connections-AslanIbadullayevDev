@@ -19,10 +19,17 @@ namespace ClientApp
                 // Configuration of host, ip address of the client starts here.
                 IPHostEntry host = Dns.GetHostEntry("localhost");
                 IPAddress ipAddress = host.AddressList[0];
-                IPEndPoint remoteEndPoint = new IPEndPoint(ipAddress, 11000); // server's end point.
+                IPEndPoint remoteEndPoint = new IPEndPoint(ipAddress, 9001); // server's end point.
 
                 // Creation of client's socket and binding it with remote end point
                 // TO DO
+
+                Socket client = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
+
+                client.Connect(remoteEndPoint);
+
+               
+                
             }
             catch (Exception ex)
             {
