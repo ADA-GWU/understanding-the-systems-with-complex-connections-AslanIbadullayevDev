@@ -54,8 +54,7 @@ namespace ClientApp
    
                 while (true)
                 {
-                    UpdatePortNumbers();
-                    Console.WriteLine("debugging...");
+                    
                     IPEndPoint remoteEndPoint = new IPEndPoint(ipAddress, ports[serverTurn % ports.Count]); // server's end point.
                     Socket client = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
@@ -78,7 +77,7 @@ namespace ClientApp
 
                     serverTurn++;
                     client.Close();
-                    Console.WriteLine("Success!");
+                    
                     
                 }
             }

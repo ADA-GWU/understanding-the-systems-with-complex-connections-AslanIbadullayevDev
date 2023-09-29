@@ -66,14 +66,13 @@ namespace ServerApp
                 {
 
                     Socket handler = server.Accept();
-                    Console.WriteLine("Success!");
                     byte[] bytes = new byte[1024];
                     string data = string.Empty;
 
                     int size = handler.Receive(bytes);
                     data = Encoding.ASCII.GetString(bytes, 0, size);
                     Console.WriteLine(int.Parse(data) * 2);
-                    UpdatePortNumbers();
+                    
                 }
             }
             catch (SocketException ex)
