@@ -1,4 +1,5 @@
 ﻿using System;
+using System.ComponentModel.Design;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -20,10 +21,12 @@ namespace ClientApp
             using (TextReader reader = new StreamReader("../PortNumbers.txt"))
             {
                 string line;
+                #pragma warning disable CS8600
                 while ((line = reader.ReadLine()) != null)
                 {
                     ports.Add(int.Parse(line));
                 }
+                #pragma warning disable CS8600
 
                 reader.Close();
             }
@@ -36,6 +39,7 @@ namespace ClientApp
             byte[]? bytes = new byte[1024];
             try
             {
+#pragma warning disable CS8600
                 using (TextReader reader = new StreamReader("../PortNumbers.txt"))
                 {
                     string line;
@@ -46,12 +50,12 @@ namespace ClientApp
 
                     reader.Close();
                 }
-
+#pragma warning disable CS8600
                 // Configuration of host, ip address of the client starts here.
                 IPHostEntry host = Dns.GetHostEntry("localhost");
                 IPAddress ipAddress = host.AddressList[0];
 
-   
+                Console.WriteLine("To exit, type stop and press enter otherwise enter number");
                 while (true)
                 {
                     
@@ -59,9 +63,16 @@ namespace ClientApp
                     Socket client = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
                     client.Connect(remoteEndPoint);
+                    #pragma warning disable CS8602
+                    string? whatToDo = Console.ReadLine();
 
-                    bool parseOk = int.TryParse(Console.ReadLine(), out num);
+                    bool parseOk = false;
 
+                    if (whatToDo.Equals("stop"))
+                        break;
+                    else
+                    parseOk = int.TryParse(whatToDo, out num);
+                    #pragma warning disable CS8602
                     if (parseOk)
                     {
                         bytes = Encoding.ASCII.GetBytes(num.ToString());

@@ -16,15 +16,17 @@ namespace ServerApp
 
         public static void UpdatePortNumbers()
         {
+            #pragma warning disable CS8600
             using (TextReader reader = new StreamReader(File.Open("../PortNumbers.txt", FileMode.OpenOrCreate)))
             {
                 string line;
-
+                #pragma warning disable CS8604
                 while ((line = reader.ReadLine()) != null)
                     list.Add(line);
-
+                #pragma warning disable CS8604
                 reader.Close();
             }
+            #pragma warning disable CS8600
         }
 
         public static void RunServer(String[] args)
@@ -32,22 +34,25 @@ namespace ServerApp
      
             try
             {
+                #pragma warning disable CS8600
                 using (TextReader reader = new StreamReader(File.Open("../PortNumbers.txt", FileMode.OpenOrCreate)))
                 {
                     string line;
-
+                #pragma warning disable CS8604
                     while ((line = reader.ReadLine()) != null)
                         list.Add(line);
-
+                #pragma warning disable CS8604
                     reader.Close();
                 }
-
+                #pragma warning disable CS8600
+                #pragma warning disable CS8600
                 using (StreamWriter writer = new StreamWriter("../PortNumbers.txt", true))
                 {
                     if (!list.Contains(args[0]))
                         writer.WriteLine(args[0]);
                 }
 
+                #pragma warning disable CS8600
                 // Configuring host, ip address, local endpoint of server/listener starts from here.
                 IPHostEntry host = Dns.GetHostEntry("localhost");
                 IPAddress ipAddress = host.AddressList[0];
