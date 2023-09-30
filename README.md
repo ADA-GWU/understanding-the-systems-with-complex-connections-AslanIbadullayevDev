@@ -17,14 +17,15 @@ When downloaded and installed, you can see .NET SDKs installed by executing the
 "dotnet --list-sdks" command. 
 If you can see a version number starting with 6.0, it means it's installed:
 
-![feef](../images/dotnetsdkversion.png)
+![dotnetsdkversion](https://github.com/ADA-GWU/understanding-the-systems-with-complex-connections-AslanIbadullayevDev/assets/113417854/4a204ddf-3302-4e05-a970-22c0ec38046c)
+
 
 
 # Usage
 
 Once you have downloaded the zip file of source code files. Extract them to a folder named "Project"
 
-![effe](../images/directory.png)
+![directory](https://github.com/ADA-GWU/understanding-the-systems-with-complex-connections-AslanIbadullayevDev/assets/113417854/6c30c8b1-eb49-4700-bd17-a2fa17f74959)
 
 Applications are run separately therefore multiple command line windows should be opened up.
 For running instances of server app, current directory should be changed to the location of ServerApp folder
@@ -36,7 +37,8 @@ Afterwards, type and press "dotnet run" command.
 Now just enter an integer in client app instance command line window, it will be displayed doubled by one
 of the running server app instances:
 
-![ef](../images/finalresult.png)
+![finalresult](https://github.com/ADA-GWU/understanding-the-systems-with-complex-connections-AslanIbadullayevDev/assets/113417854/9c346e4e-e69e-4c26-b4e2-1d6291ad42b2)
+
 
 Similar to this execution guideline the same steps be taken for running apps on MacOs. 
 
