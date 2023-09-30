@@ -11,7 +11,7 @@ The project written in C# requires .net sdk version of at least 6.0 installed on
 If there isn't any, open the below link and download .net sdk 6.0 choosing the appropriate OS under the Installers column:
 if your machine is based on 64-bit architecture then click on the x64.
 
-![](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
+[](https://dotnet.microsoft.com/en-us/download/dotnet/6.0)
 
 When downloaded and installed, you can see .NET SDKs installed by executing the
 "dotnet --list-sdks" command. 
@@ -42,6 +42,6 @@ of the running server app instances:
 
 Similar to this execution guideline the same steps be taken for running apps on MacOs. 
 
-![]([https:/](https://youtu.be/Jr0XGKHoYU0?si=0JpVCwygpT8aUXLO)https://youtu.be/Jr0XGKHoYU0?si=0JpVCwygpT8aUXLO)
+[](https://youtu.be/Jr0XGKHoYU0?si=0JpVCwygpT8aUXLO)
 time interval 1:52 - 3:17 
 
