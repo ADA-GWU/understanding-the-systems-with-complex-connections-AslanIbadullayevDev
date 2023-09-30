@@ -43,6 +43,6 @@ of the running server app instances:
 Similar to this execution guideline the same steps be taken for running apps on MacOs. 
 You can watch the video in the below link:
 
-[](https://youtu.be/Jr0XGKHoYU0?si=0JpVCwygpT8aUXLO)
+[](https://www.youtube.com/watch?v=Jr0XGKHoYU0&t=107s)
 time interval 1:52 - 3:17 
 
