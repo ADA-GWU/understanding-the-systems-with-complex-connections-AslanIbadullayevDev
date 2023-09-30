@@ -55,7 +55,7 @@ namespace ClientApp
                 IPHostEntry host = Dns.GetHostEntry("localhost");
                 IPAddress ipAddress = host.AddressList[0];
 
-                Console.WriteLine("To exit, type stop and press enter otherwise enter number");
+                Console.WriteLine("Enter number");
                 while (true)
                 {
                     
