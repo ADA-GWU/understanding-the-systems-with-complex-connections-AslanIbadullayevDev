@@ -17,14 +17,14 @@ When downloaded and installed, you can see .NET SDKs installed by executing the
 "dotnet --list-sdks" command. 
 If you can see a version number starting with 6.0, it means it's installed:
 
-// image to be added
+![feef](images/dotnetsdkversion.png)
 
 
 # Usage
 
 Once you have downloaded the zip file of source code files. Extract them to a folder named "Project"
 
-// image to be added
+![effe](images/directory.png)
 
 Applications are run separately therefore multiple command line windows should be opened up.
 For running instances of server app, current directory should be changed to the location of ServerApp folder
@@ -36,9 +36,9 @@ Afterwards, type and press "dotnet run" command.
 Now just enter an integer in client app instance command line window, it will be displayed doubled by one
 of the running server app instances:
 
+![ef](images/finalresult.png)
 
-
-
+Similar to this execution guideline the same steps be taken for running apps on MacOs. 
 
 
 
