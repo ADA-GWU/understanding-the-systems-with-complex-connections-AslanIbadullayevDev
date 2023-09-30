@@ -3,7 +3,7 @@
 First, user creates three instances of server application manually by passing port numbers for each of them on command line window.
 Then user runs the client app that prompts to enter a number of integer data type.
 Each time an integer number is entered in client app terminal, doubled value of that entered number will get
-printed out on one of the server app instances sequntially.
+printed out on one of the server app instances sequentially.
 
 # Installation
 
