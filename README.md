@@ -52,8 +52,9 @@ Configuration steps:
 6. Then in order for the command "dotnet" to be runnable globally, type in sudo su then you will be prompted for your admin password or usual password enter it
 7. Afterwards, type in this command ln -s /usr/local/share/dotnet/x64/dotnet /usr/local/bin/ then hit enter
 8. Finally to ensure it's globally runnable type in dotnet and hit enter if no error it's ok. Below is the screenshot for the configuration steps.
-    ![ConfigImage](./images/configurationForMacOs.png)
-   
+9. 
+    ![configurationForMacOs](https://github.com/ADA-GWU/understanding-the-systems-with-complex-connections-AslanIbadullayevDev/assets/113417854/33b576fb-9e13-4323-aa19-d4941c7f7c2d)
+
 Execution steps:
 1. Download the ZIP file of the project.
 2. Extract the folder named understanding-the-systems-with-complex-connections-AslanIbadullayevDev-main to the Desktop
@@ -64,7 +65,8 @@ Execution steps:
 7. Finally open up another terminal window change directory by typing in cd Desktop/understanding-the-systems-with-complex-connections-AslanIbadullayevDev-main/ClientApp and hit enter
 8. Execute dotnet run
 9. Enter numbers on client app instance terminal window server app instances will respond with doubled values of the entered numbers sequentially. Final result should be as follows:
-    ![ExecutionImg](./images/finalresultMacOs.png)
+10. 
+    ![finalresultMacOs](https://github.com/ADA-GWU/understanding-the-systems-with-complex-connections-AslanIbadullayevDev/assets/113417854/550f0ffa-cd66-432a-811a-14cf35299ba0)
 
 
 
