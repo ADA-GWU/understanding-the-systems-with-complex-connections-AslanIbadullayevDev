@@ -9,33 +9,17 @@ namespace ClientApp
     public class Program // *** Developed by Aslan Ibadullayev ***
     {
         public static int num;
-        public static List<int> ports = new List<int>();
+        public static List<int> ports = new List<int>(); // to store a list of ports
         public static int Main(String[] args)
         {
-            RunClient();
+            RunClient(); // activating the client app.
             return 0;
-        }
-
-        public static void UpdatePortNumbers()
-        {
-            using (TextReader reader = new StreamReader("../PortNumbers.txt"))
-            {
-                string line;
-                #pragma warning disable CS8600
-                while ((line = reader.ReadLine()) != null)
-                {
-                    ports.Add(int.Parse(line));
-                }
-                #pragma warning disable CS8600
-
-                reader.Close();
-            }
         }
 
         public static void RunClient()
         {
 
-            int serverTurn = 0;
+            int serverTurn = 0; // used for detemining which server should respond when data entered.
             byte[]? bytes = new byte[1024];
             try
             {
@@ -58,11 +42,11 @@ namespace ClientApp
                 Console.WriteLine("Enter number");
                 while (true)
                 {
-                    
+                    // creating end point for server
                     IPEndPoint remoteEndPoint = new IPEndPoint(ipAddress, ports[serverTurn % ports.Count]); // server's end point.
                     Socket client = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
-                    client.Connect(remoteEndPoint);
+                    client.Connect(remoteEndPoint); // connecting to the server with the specified ip address and port.
                     #pragma warning disable CS8602
                     string? whatToDo = Console.ReadLine();
 
@@ -76,7 +60,7 @@ namespace ClientApp
                     if (parseOk)
                     {
                         bytes = Encoding.ASCII.GetBytes(num.ToString());
-                        client.Send(bytes);
+                        client.Send(bytes); // sending data as bytes to the server
                     }
                     else
                     {

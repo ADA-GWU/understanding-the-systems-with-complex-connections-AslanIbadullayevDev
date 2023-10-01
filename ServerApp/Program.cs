@@ -14,27 +14,12 @@ namespace ServerApp
             return 0;
         }
 
-        public static void UpdatePortNumbers()
-        {
-            #pragma warning disable CS8600
-            using (TextReader reader = new StreamReader(File.Open("../PortNumbers.txt", FileMode.OpenOrCreate)))
-            {
-                string line;
-                #pragma warning disable CS8604
-                while ((line = reader.ReadLine()) != null)
-                    list.Add(line);
-                #pragma warning disable CS8604
-                reader.Close();
-            }
-            #pragma warning disable CS8600
-        }
-
         public static void RunServer(String[] args)
         {
      
             try
             {
-                #pragma warning disable CS8600
+                #pragma warning disable CS8600 // for suppressing some errors not affecting the program
                 using (TextReader reader = new StreamReader(File.Open("../PortNumbers.txt", FileMode.OpenOrCreate)))
                 {
                     string line;
@@ -60,9 +45,9 @@ namespace ServerApp
 
                 Socket server = new Socket(ipAddress.AddressFamily, SocketType.Stream, ProtocolType.Tcp);
 
-                server.Bind(serverEndPoint);
+                server.Bind(serverEndPoint); // to specify the server's ip address and port
 
-                server.Listen(10);
+                server.Listen(10); // specifies how many request can be accepted at a time
 
                 Console.WriteLine("ready to serve!");
                 Console.WriteLine("listening on port {0}", serverEndPoint.Port);
@@ -70,13 +55,13 @@ namespace ServerApp
                 while (true)
                 {
 
-                    Socket handler = server.Accept();
+                    Socket handler = server.Accept(); // socket created to handle incoming requests
                     byte[] bytes = new byte[1024];
                     string data = string.Empty;
 
-                    int size = handler.Receive(bytes);
+                    int size = handler.Receive(bytes); // receiving data from the client
                     data = Encoding.ASCII.GetString(bytes, 0, size);
-                    Console.WriteLine(int.Parse(data) * 2);
+                    Console.WriteLine(int.Parse(data) * 2); // doubled value gets displayed.
                     
                 }
             }
